@@ -52,6 +52,7 @@ public class HrsManager extends BleManager<HrsManagerCallbacks>
 	private BluetoothDevice mDevice;
 	private DiscoveredBluetoothDevice mDiscoveredBluetoothDevice;
 	private int mLastestHr = 0;
+	private CallbackImpl mFakeCallbacks = new CallbackImpl();
 
 	private static HrsManager managerInstance = null;
 
@@ -216,6 +217,11 @@ public class HrsManager extends BleManager<HrsManagerCallbacks>
 		mLastestHr = 0;
 		mDevices.clear();
 		super.disconnect().enqueue();
+	}
+
+	public void removeGattCallbacks()
+	{
+		setGattCallbacks(mFakeCallbacks);
 	}
 
 	public void startScan()

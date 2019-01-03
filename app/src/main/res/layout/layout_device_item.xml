@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:minHeight="45dp"
+                tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/txvName"
+        fontPath="dinot_cond_medium.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="22.5sp"/>
+
+    <TextView
+        android:id="@+id/txvConnected"
+        fontPath="dinot_cond.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/txvName"
+        android:text="connected"
+        android:textColor="#4beb7c"
+        android:textSize="22.5sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#7fffffff"/>
+
+</RelativeLayout>
